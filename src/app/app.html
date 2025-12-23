@@ -1,36 +1,46 @@
 <app-header></app-header>
 
-<section class="flex items-center justify-center min-h-screen bg-gray-50 px-8 py-10">
-  <div class="flex flex-col md:flex-row items-center  justify-centerw-full gap-12">
-    <div class="flex-1 text-center md:text-left gap-2 flex flex-col">
-      <div class="mb-6">
-        <h1 class="text-md md:text-md font-bold text-gray-900 mb-2">Hey, i'm Koffi</h1>
+<section class=" flex items-center justify-center bg-gray-50 px-6 py-10">
+  <div class="flex flex-col md:flex-row items-center justify-center w-full mx-auto px-15 py-10 gap-6">
+    
+    <div class="flex-1 text-center md:text-left flex flex-col gap-3">
+      <div>
+        <h1 class="text-md font-bold text-gray-900">Hey, i'm Koffi</h1>
         <h1 class="text-3xl md:text-5xl font-semibold text-gray-700">
           I create <span class="text-violet-500">product design</span> and brand experience
         </h1>
       </div>
-      <p class="text-lg text-gray-600 leading-relaxed max-w-lg">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.
+
+      <p class="text-lg text-gray-600 max-w-lg">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
       </p>
-      <button class="mt-6 w-fit  bg-violet-500 text-white font-semibold rounded-md py-4 px-6  ">
+
+      <button class="mt-2 w-fit bg-violet-500 text-white font-semibold rounded-md py-3 px-5">
         Get In Touch
       </button>
     </div>
+
     <div class="flex-1 flex justify-center">
-      <div class="bg-blue-400 w-60 h-60 md:w-160 md:h-100 rounded-md shadow-lg"></div>
+      <div class="bg-blue-400 w-200 h-120 rounded-md shadow-md"></div>
+      <img src="/images/prtflio-img.png" alt="">
     </div>
+
   </div>
 </section>
 
-<section class="flex items-center justify-start min-h-screen bg-white px-8 py-10">
-  <div class="flex flex-col ">
-    <h1 class="text-md">My Skills</h1>
-    <h1 class="text-6xl">My Expertise</h1>
+
+<section class="flex flex-col justify-start bg-white px-6 py-30 gap-25">
+<div class="px-15">
+    <h1 class="text-md text-gray-500">My Skills</h1>
+    <h1 class="text-5xl font-semibold">My Expertise</h1>
   </div>
 
-  <div class="">
-    
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8 px-15">
+    <app-card *ngFor="let card of cards()" [image]="card.image" [title]="card.title" [content]="card.content"></app-card>
   </div>
 </section>
+
+<router-outlet></router-outlet>
+
 
 <router-outlet></router-outlet>

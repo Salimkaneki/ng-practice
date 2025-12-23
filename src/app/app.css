@@ -1,0 +1,9 @@
+/* Variables pour paddings et dimensions */
+:root {
+  --section-padding-x: 60px;
+  --section-padding-y: 40px;
+  --expertise-padding-y: 120px;
+  --expertise-gap: 100px;
+  --image-width: 800px;
+  --image-height: 480px;
+}

@@ -1,1 +1,5 @@
-<p>card works!</p>
+<div class="w-100  flex flex-col gap-8 p-6 bg-blue-50 rounded-lg shadow-md ">
+    <img *ngIf="image" [src]="image" alt="{{ title }}" class="w-20 h-20 object-cover rounded-md ">
+    <h1 class="text-3xl font-bold">{{ title }}</h1>
+    <p class=" text-xl text-gray-700 font-regular grow">{{ content }}</p>
+</div>

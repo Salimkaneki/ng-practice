@@ -1,11 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-card',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './card.html',
   styleUrl: './card.css',
 })
 export class Card {
+  
+  @Input() image: string = '';
+  @Input() title: string = '';
+  @Input() content: string = '';
 
 }
